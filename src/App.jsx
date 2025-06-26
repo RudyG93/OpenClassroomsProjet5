@@ -11,7 +11,6 @@ export default function App() {
   return (
     <Router>
       <Header />
-      <div className="push">
         <div className="wrapper">
           <Routes>
             <Route path="/" element={<Accueil />} />
@@ -21,7 +20,6 @@ export default function App() {
           </Routes>{" "}
         </div>
         <Footer />
-      </div>
     </Router>
   );
 }
