@@ -1,0 +1,47 @@
+$primary-color: #ff6060;
+$background-color: #f6f6f6;
+$text-light: #fff;
+$text-dark: #000;
+$radius: 15px;
+$shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+.card {
+  position: relative;
+  height: 260px;
+  border-radius: $radius;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: $shadow;
+
+  &__cover {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    transition: transform 0.3s ease;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent 50%);
+    z-index: 1;
+  }
+
+  &__title {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    color: white;
+    font-weight: 600;
+    font-size: 0.95rem;
+    z-index: 2;
+  }
+
+  &:hover .card__cover {
+    transform: scale(1.05);
+  }
+}

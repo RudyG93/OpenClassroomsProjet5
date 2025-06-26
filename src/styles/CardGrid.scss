@@ -1,0 +1,22 @@
+// ───────────────────────────────────────────────
+//  Variables
+// ───────────────────────────────────────────────
+$primary-color: #ff6060;
+$background-color: #f6f6f6;
+$text-light: #fff;
+$radius: 15px;
+
+// ───────────────────────────────────────────────
+//  Grille de cartes
+// ───────────────────────────────────────────────
+.cards-container {
+  display: flex;
+  background: $background-color;
+  padding: 2.5rem;
+  border-radius: $radius;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+}

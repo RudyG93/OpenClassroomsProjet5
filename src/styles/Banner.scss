@@ -1,0 +1,29 @@
+.banner {
+  position: relative;
+  background: url("../assets/banner.png") center/cover no-repeat;
+  border-radius: 15px;
+  height: 220px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: inherit;
+  }
+
+  h1 {
+    position: relative;
+    color: white;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 700;
+    text-align: center;
+    z-index: 1;
+    line-height: 1.2;
+  }
+}

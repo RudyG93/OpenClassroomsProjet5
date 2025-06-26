@@ -1,0 +1,53 @@
+$primary-color: #ff6060;
+$background-color: #f6f6f6;
+$text-light: #fff;
+$text-dark: #000;
+$radius: 15px;
+$shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+.collapse {
+  background: $background-color;
+  border-radius: $radius;
+  overflow: hidden;
+  margin-top: 1.5rem;
+
+  &__header {
+    width: 100%;
+    background: $primary-color;
+    color: $text-light;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.2rem;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+
+    .collapse__icon {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      background: url("../assets/chevron.svg") center/contain no-repeat;
+      transition: transform 0.2s;
+    }
+  }
+
+  &.open {
+    .collapse__icon {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__content {
+    padding: 1rem 1.2rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: $text-dark;
+
+    ul {
+      padding-left: 1.2rem;
+      list-style: disc;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 30px auto;
+
+  img {
+    width: 150px;
+    margin: 0 20px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+    margin: 0 20px;
+
+    a {
+      color: black;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.5em;
+
+      &.active {
+        text-decoration: underline;
+      }
+    }
+  }
+}

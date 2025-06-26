@@ -1,0 +1,19 @@
+footer {
+  text-align: center;
+  background-color: black;
+  padding: 70px 0;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+
+  img {
+    width: 100px;
+  }
+
+  p {
+    font-size: 1.5em;
+    color: white;
+  }
+}

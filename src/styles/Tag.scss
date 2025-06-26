@@ -1,0 +1,18 @@
+$primary-color: #ff6060;
+$background-color: #f6f6f6;
+$text-light: #fff;
+$text-dark: #000;
+$radius: 15px;
+$shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+.tag {
+  display: inline-block;
+  background: $primary-color;
+  color: $text-light;
+  padding: 4px 14px;
+  border-radius: $radius;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+}
