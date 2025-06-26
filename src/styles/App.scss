@@ -1,0 +1,19 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.layout > main.content {
+  flex: 1 0 auto;
+  max-width: 1200px;
+  justify-self: center;
+  margin: 0 auto;
+  padding: 1rem 1rem 2rem;  
+}
+
+.layout > header,
+.layout > footer {
+  flex: 0 0 auto;
+  width: 100%;
+}

@@ -5,18 +5,23 @@ import Logement from "./pages/Logement";
 import Erreur from "./pages/Erreur";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import "./styles/App.scss";
 
 export default function App() {
   return (
     <Router>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Accueil />} />
-        <Route path="/a-propos" element={<APropos />} />
-        <Route path="/logement/:id" element={<Logement />} />
-        <Route path="*" element={<Erreur />} />
-      </Routes>
-      <Footer />
+      <div className="layout">
+        <Header />
+        <main className="content">
+          <Routes>
+            <Route path="/" element={<Accueil />} />
+            <Route path="/a-propos" element={<APropos />} />
+            <Route path="/logement/:id" element={<Logement />} />
+            <Route path="*" element={<Erreur />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
     </Router>
   );
 }

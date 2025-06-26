@@ -1,15 +1,26 @@
 import { useState } from "react";
+import Arrow from "../assets/chevron.svg";
 import "../styles/Collapse.scss";
 
 export default function Collapse({ title, children }) {
   const [open, setOpen] = useState(false);
+
   return (
-    <div className={`collapse${open ? " open" : ""}`}>
-      <button className="collapse__header" onClick={() => setOpen(!open)}>
-        {title}
-        <span className="collapse__icon" />
+    <section className={`collapse${open ? " open" : ""}`}>
+      <button
+        type="button"
+        className="collapse__header"
+        onClick={() => setOpen(!open)}
+        aria-expanded={open}
+      >
+        <span>{title}</span>
+
+        <img src={Arrow} alt="chevron" className="collapse__icon" />
       </button>
-      {open && <div className="collapse__content">{children}</div>}
-    </div>
+
+      <div className="collapse__content-wrapper">
+        <div className="collapse__content">{children}</div>
+      </div>
+    </section>
   );
 }

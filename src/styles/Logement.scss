@@ -1,37 +1,42 @@
+/* mêmes variables que partout */
 $primary-color: #ff6060;
-$background-color: #f6f6f6;
-$text-light: #fff;
-$text-dark: #000;
-$radius: 15px;
-$shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+$grey-background: #f6f6f6;
 
 .logement {
+  /* wrapper centré comme sur le mock-up */
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
 
+  /* ---------- HEADERS, TAGS, HOST ------------------------------------ */
   &__header {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 1rem;
+    margin-bottom: 1.5rem;
   }
 
   &__infos {
     h2 {
-      font-size: 1.7rem;
+      margin: 0 0 0.4rem 0;
       color: $primary-color;
-      margin-bottom: 0.3rem;
+      font-size: 1.9rem;
+      font-weight: 500;
     }
 
-    & > .logement__location {
-      font-size: 0.95rem;
-      color: $text-dark;
+    .logement__location {
+      font-size: 1rem;
+      margin-bottom: 0.8rem;
+      font-weight: 500;
     }
 
-    & > .logement__tags {
+    .logement__tags {
       display: flex;
       flex-wrap: wrap;
+      gap: 0.6rem;
     }
   }
 
@@ -44,12 +49,19 @@ $shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
   &__host {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    text-align: right;
-    font-weight: 600;
-    font-size: 0.9rem;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1.3rem;
     color: $primary-color;
+    text-align: right;
+
+    &-name {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+      margin-right: 1rem;
+      justify-items: flex-end;
+    }
 
     img {
       width: 64px;
@@ -60,9 +72,20 @@ $shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
   }
 
+  /* ---------- BLOC DETAILS (Description + Équipements) --------------- */
   &__details {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
+
+    /* Chaque Collapse garde sa hauteur auto */
+    > .collapse {
+      align-self: flex-start;
+    }
+
+    /* Mobile : on empile */
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
   }
 }

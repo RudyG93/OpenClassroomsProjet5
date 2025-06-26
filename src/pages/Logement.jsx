@@ -40,8 +40,12 @@ export default function Logement() {
 
         <div className="logement__host-block">
           <div className="logement__host">
-            <span>{host.name.split(" ")[0]}</span>
-            <span>{host.name.split(" ")[1]}</span>
+            <div className="logement__host-name">
+              <span>{host.name.split(" ")[0]}</span>
+              {host.name.split(" ")[1] && (
+                <span>{host.name.split(" ")[1]}</span>
+              )}
+            </div>
             <img src={host.picture} alt={host.name} />
           </div>
           <Rating value={Number(rating)} />

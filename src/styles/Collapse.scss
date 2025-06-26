@@ -1,53 +1,80 @@
 $primary-color: #ff6060;
-$background-color: #f6f6f6;
-$text-light: #fff;
-$text-dark: #000;
-$radius: 15px;
-$shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+$grey-background: #f6f6f6;
+$white: #ffffff;
+$radius: 10px;
 
 .collapse {
-  background: $background-color;
-  border-radius: $radius;
-  overflow: hidden;
-  margin-top: 1.5rem;
+  width: 100%;
 
   &__header {
     width: 100%;
-    background: $primary-color;
-    color: $text-light;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 1.2rem;
-    font-weight: 600;
+
+    background: $primary-color;
+    color: $white;
+    padding: 0.9rem 1.2rem;
     font-size: 1rem;
-    border: none;
-    cursor: pointer;
+    font-weight: 600;
+    border-radius: $radius;
 
     .collapse__icon {
-      display: inline-block;
-      width: 18px;
-      height: 18px;
-      background: url("../assets/chevron.svg") center/contain no-repeat;
-      transition: transform 0.2s;
+      transition: transform 0.3s ease;
+      display: flex;
+      width: 25px;
+      height: 25px;
+      rotate: 270deg;
+    }
+  }
+
+  &__content-wrapper {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    background: $grey-background;
+    border-bottom-left-radius: $radius;
+    border-bottom-right-radius: $radius;
+  }
+
+  &__content {
+    padding: 1.2rem;
+    line-height: 1.4;
+    color: #000;
+
+    ul {
+      padding-left: 1rem;
+      margin: 0;
+    }
+
+    li {
+      list-style: none;
+      margin-bottom: 0.35rem;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        left: -0.7rem;
+      }
     }
   }
 
   &.open {
-    .collapse__icon {
-      transform: rotate(180deg);
+    .collapse__content-wrapper {
+      max-height: 600px;
     }
-  }
 
-  &__content {
-    padding: 1rem 1.2rem;
-    font-size: 0.9rem;
-    line-height: 1.4;
-    color: $text-dark;
+    .collapse__header {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
 
-    ul {
-      padding-left: 1.2rem;
-      list-style: disc;
+    .collapse__icon {
+      transform: rotate(-0.5turn);
     }
   }
 }

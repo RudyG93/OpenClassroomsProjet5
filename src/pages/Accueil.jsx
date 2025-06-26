@@ -1,13 +1,15 @@
 import Banner from "../components/Banner.jsx";
 import logements from "../data/logements.json";
 import CardsGrid from "../components/CardGrid";
-import "../styles/Accueil.scss";
+import BannerImg from "../assets/banner.png";
 
 export default function Accueil() {
   return (
-    <main>
-      <Banner />
+    <div>
+      <Banner image={BannerImg} alt="">
+        <h1>Chez vous, partout et ailleurs</h1>
+      </Banner>
       <CardsGrid items={logements} />
-    </main>
+    </div>
   );
 }
