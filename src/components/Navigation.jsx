@@ -1,6 +1,6 @@
 import { NavLink } from "react-router";
 
-function Navigation() {
+export default function Navigation() {
   return (
     <nav>
       <NavLink to="/">Accueil</NavLink>
@@ -8,5 +8,3 @@ function Navigation() {
     </nav>
   );
 }
-
-export default Navigation;

@@ -2,7 +2,7 @@ import "../styles/Header.scss";
 import Logo from "../assets/logo.png";
 import Navigation from "./Navigation";  
 
-function Header() {
+export default function Header() {
   return (
     <header>
       <img src={Logo} alt="logo-kasa" />
@@ -10,5 +10,3 @@ function Header() {
     </header>
   );
 }
-
-export default Header;
