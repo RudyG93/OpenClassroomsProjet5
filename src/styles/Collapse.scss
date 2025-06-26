@@ -1,7 +1,4 @@
-$primary-color: #ff6060;
-$grey-background: #f6f6f6;
-$white: #ffffff;
-$radius: 10px;
+@import "./variables";
 
 .collapse {
   width: 100%;
@@ -17,11 +14,11 @@ $radius: 10px;
     align-items: center;
 
     background: $primary-color;
-    color: $white;
+    color: $text-light;
     padding: 0.9rem 1.2rem;
     font-size: 1rem;
     font-weight: 600;
-    border-radius: $radius;
+    border-radius: $radius-small;
 
     .collapse__icon {
       transition: transform 0.3s ease;
@@ -36,9 +33,9 @@ $radius: 10px;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease;
-    background: $grey-background;
-    border-bottom-left-radius: $radius;
-    border-bottom-right-radius: $radius;
+    background: $background-color;
+    border-bottom-left-radius: $radius-small;
+    border-bottom-right-radius: $radius-small;
   }
 
   &__content {

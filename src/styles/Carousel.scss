@@ -1,9 +1,4 @@
-$primary-color: #ff6060;
-$background-color: #f6f6f6;
-$text-light: #fff;
-$text-dark: #000;
-$radius: 15px;
-$shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+@import "./variables";
 
 .carousel {
   position: relative;
@@ -36,11 +31,11 @@ $shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
     &--left {
-      left: 40px;
+      left: 20px;
       transform: translateY(-50%) rotate(180deg);
     }
     &--right {
-      right: 40px;
+      right: 20px;
     }
   }
 

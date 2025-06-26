@@ -1,18 +1,8 @@
-// ───────────────────────────────────────────────
-//  Variables
-// ───────────────────────────────────────────────
-$primary-color: #ff6060;
-$background-color: #f6f6f6;
-$text-light: #fff;
-$radius: 15px;
-
-// ───────────────────────────────────────────────
-//  Grille de cartes
-// ───────────────────────────────────────────────
+@import "./variables";
 
 .cards-container {
   display: flex;
-  max-width: 1200px;
+  max-width: $max-width;
   padding: 0 30px;
   margin: 0 auto;
 

@@ -1,4 +1,8 @@
+@import './variables';
+
 .wrapper {
-  max-width: 1440px;
+  max-width: $max-width-large;
   margin: 0 auto;
+  min-height: calc(100vh - 358px); // Adjust for header/footer height
+  flex: 0 0 auto;
 }

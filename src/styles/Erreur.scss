@@ -1,13 +1,18 @@
-$primary-color: #ff6060;
+@import "./variables";
 
 .erreur {
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;    
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 30px;
+  gap: 5rem;
+  align-items: center;
+  text-align: center;
+
   h1 {
     color: $primary-color;
-    font-size: 10vw;
+    font-size: 202px;
     font-weight: 700;
     margin: auto;
   }
@@ -27,6 +32,25 @@ $primary-color: #ff6060;
 
     &:hover {
       text-decoration: underline;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .erreur {
+    padding: 0 20px;
+    margin: 20px auto;
+
+    h1 {
+      font-size: 150px;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
+
+    &__link {
+      font-size: 1.2rem;
     }
   }
 }

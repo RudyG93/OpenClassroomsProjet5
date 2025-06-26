@@ -1,3 +1,5 @@
+@import "./variables";
+
 .apropos__collapses {
   display: flex;
   flex-direction: column;
@@ -9,7 +11,10 @@
 }
 
 @media (max-width: 768px) {
-  .apropos__collapses {
-    padding: 20px;
+  .apropos {
+    margin: 20px auto;
+    .apropos__collapses {
+      padding: 20px;
+    }
   }
 }

@@ -5,6 +5,7 @@ import Tag from "../components/Tag";
 import Rating from "../components/Rating";
 import Collapse from "../components/Collapse";
 import "../styles/Logement.scss";
+import "../styles/Footer.scss";
 
 export default function Logement() {
   const { id } = useParams();
@@ -25,7 +26,9 @@ export default function Logement() {
 
   return (
     <main className="logement">
-      <div className="carousel-container"><Carousel pictures={pictures} /></div>
+      <div className="carousel-container">
+        <Carousel pictures={pictures} />
+      </div>
 
       <div className="logement__header">
         <div className="logement__infos">

@@ -1,10 +1,8 @@
-/* mêmes variables que partout */
-$primary-color: #ff6060;
-$grey-background: #f6f6f6;
+@import "./variables";
 
 .logement {
   .carousel-container {
-    max-width: 1200px;
+    max-width: $max-width;
     padding: 0 30px;
     margin: 0 auto;
   }
@@ -15,7 +13,7 @@ $grey-background: #f6f6f6;
     justify-content: space-between;
     gap: 1rem;
     margin-bottom: 1.5rem;
-    max-width: 1200px;
+    max-width: $max-width;
     padding: 0 30px;
     margin: 0 auto;
   }
@@ -76,7 +74,7 @@ $grey-background: #f6f6f6;
   /* ---------- BLOC DETAILS (Description + Équipements) --------------- */
   &__details {
     display: grid;
-    max-width: 1200px;
+    max-width: $max-width;
     margin: 0 auto;
     padding: 30px;
     grid-template-columns: 1fr 1fr;
@@ -91,6 +89,7 @@ $grey-background: #f6f6f6;
 
 @media (max-width: 768px) {
   .logement {
+    margin: 20px auto;
     .carousel-container {
       padding: 0 20px;
     }

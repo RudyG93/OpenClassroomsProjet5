@@ -1,8 +1,10 @@
+@import "./variables";
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  max-width: $max-width;
   padding: 30px;
   margin: 0 auto;
 
@@ -19,7 +21,7 @@
     gap: 50px;
 
     a {
-      color: black;
+      color: $text-dark;
       text-decoration: none;
       font-weight: 500;
       font-size: 1.5em;
