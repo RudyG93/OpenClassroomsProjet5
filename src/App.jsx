@@ -10,18 +10,16 @@ import "./styles/App.scss";
 export default function App() {
   return (
     <Router>
-      <div className="layout">
+      <div className="wrapper">
         <Header />
-        <main className="content">
-          <Routes>
-            <Route path="/" element={<Accueil />} />
-            <Route path="/a-propos" element={<APropos />} />
-            <Route path="/logement/:id" element={<Logement />} />
-            <Route path="*" element={<Erreur />} />
-          </Routes>
-        </main>
-        <Footer />
+        <Routes>
+          <Route path="/" element={<Accueil />} />
+          <Route path="/a-propos" element={<APropos />} />
+          <Route path="/logement/:id" element={<Logement />} />
+          <Route path="*" element={<Erreur />} />
+        </Routes>
       </div>
+      <Footer />
     </Router>
   );
 }

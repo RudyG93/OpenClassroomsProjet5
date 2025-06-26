@@ -2,7 +2,7 @@ $primary-color: #ff6060;
 $background-color: #f6f6f6;
 $text-light: #fff;
 $text-dark: #000;
-$radius: 15px;
+$radius: 10px;
 $shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
 .tag {
@@ -15,4 +15,12 @@ $shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   font-weight: 600;
   margin-right: 0.5rem;
   margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .tag {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 0.6rem;
+  }
 }

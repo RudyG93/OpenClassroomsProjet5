@@ -4,8 +4,8 @@ import Navigation from "./Navigation";
 
 export default function Header() {
   return (
-    <header>
-      <img src={Logo} alt="logo-kasa" />
+    <header className="header">
+      <div className="logo"><img src={Logo} alt="logo-kasa" /></div>
       <Navigation />
     </header>
   );

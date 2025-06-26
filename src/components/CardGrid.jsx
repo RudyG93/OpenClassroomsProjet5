@@ -4,9 +4,11 @@ import "../styles/CardGrid.scss";
 export default function CardsGrid({ items = [] }) {
   return (
     <section className="cards-container">
-      {items.map((it) => (
-        <Card key={it.id} {...it} />
-      ))}
+      <div className="cards-grid">
+        {items.map((it) => (
+          <Card key={it.id} {...it} />
+        ))}
+      </div>
     </section>
   );
 }

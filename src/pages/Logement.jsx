@@ -25,7 +25,7 @@ export default function Logement() {
 
   return (
     <main className="logement">
-      <Carousel pictures={pictures} />
+      <div className="carousel-container"><Carousel pictures={pictures} /></div>
 
       <div className="logement__header">
         <div className="logement__infos">

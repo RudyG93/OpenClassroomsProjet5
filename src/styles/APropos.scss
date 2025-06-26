@@ -1,19 +1,15 @@
-$gap-section: 2rem;
-
-/* -------- Page À propos --------------------------------- */
-.apropos {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: $gap-section;
-}
-
-/* Bloc qui empile les Collapse */
 .apropos__collapses {
   display: flex;
   flex-direction: column;
+  justify-self: center;
+  max-width: 1000px;
+  padding: 30px;
+  margin: 0 auto;
   gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .apropos__collapses {
+    padding: 20px;
+  }
 }

@@ -1,20 +1,4 @@
-.layout {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-
-  /* --- zone principale --- */
-  > main.content {
-    flex: 1 0 auto;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem 1rem 2rem;
-  }
-
-  /* --- header & footer --- */
-  > header,
-  > footer {
-    flex: 0 0 auto;
-    width: 100%;
-  }
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
 }
