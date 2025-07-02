@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Arrow from "../assets/chevron.svg";
 import "../styles/Collapse.scss";
 
 export default function Collapse({ title, children }) {
@@ -15,7 +14,7 @@ export default function Collapse({ title, children }) {
       >
         <span>{title}</span>
 
-        <img src={Arrow} alt="chevron" className="collapse__icon" />
+        <span className="collapse__icon fa-solid fa-chevron-up"></span>
       </button>
 
       <div className="collapse__content-wrapper">

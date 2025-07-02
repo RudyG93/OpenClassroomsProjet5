@@ -16,13 +16,11 @@ export default function Carousel({ pictures = [] }) {
       {total > 1 && (
         <>
           <button
-            className="carousel__arrow carousel__arrow--left"
-            onClick={prev}
-          />
+            className="carousel__arrow carousel__arrow--left fa-solid fa-chevron-left"
+            onClick={prev}/>
           <button
-            className="carousel__arrow carousel__arrow--right"
-            onClick={next}
-          />
+            className="carousel__arrow carousel__arrow--right fa-solid fa-chevron-right"
+            onClick={next}/>
           <span className="carousel__counter">
             {index + 1}/{total}
           </span>
