@@ -1,6 +1,6 @@
-@import './variables';
+@import "./variables";
 
-footer {
+.footer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,12 +12,21 @@ footer {
   height: 150px;
   text-align: center;
 
-  img {
-    width: 100px;
+  &__img {
+    width: 130px;
   }
 
-  p {
+  &__text {
     font-size: 1.5em;
     color: $text-light;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    &__text {
+      font-size: 1em;
+      width: 130px;
+    }
   }
 }
