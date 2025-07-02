@@ -28,3 +28,12 @@
     }
   }
 }
+
+@media (max-width: 425px ) {
+  .cards-container {
+    .cards-grid {
+      background-color: transparent;
+      padding: 0;
+    }
+  }
+}
